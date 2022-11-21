@@ -1,0 +1,45 @@
+{
+    "name": "jolicht/dogado-id",
+    "description": "Dogado Id",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jolicht\\DogadoId\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jolicht\\DogadoId\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Johannes Lichtenwallner",
+            "email": "jl@easyname.at"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=8.1",
+        "webmozart/assert": "^1.11",
+        "ramsey/uuid": "^4.6"
+    },
+    "require-dev": {
+        "vimeo/psalm": "^4.30",
+        "phpunit/phpunit": "^9.5",
+        "friendsofphp/php-cs-fixer": "^3.13"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit",
+        "coverage": "XDEBUG_MODE=coverage ./vendor/bin/phpunit",
+        "psalm": "./vendor/bin/psalm",
+        "fix-style": "./vendor/bin/php-cs-fixer fix --allow-risky=yes",
+        "check-style": "./vendor/bin/php-cs-fixer fix --allow-risky=yes --dry-run -v",
+        "metrics": [
+            "@coverage",
+            "@psalm",
+            "@check-style"
+        ]
+    }
+}
