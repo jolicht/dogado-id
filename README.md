@@ -1,2 +1,7 @@
-# dogado-id
-Dogado Id
+# Dogado Id
+
+## Installation
+
+```console
+$ composer require jolicht/dogado-id
+```
