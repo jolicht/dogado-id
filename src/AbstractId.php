@@ -12,7 +12,7 @@ abstract class AbstractId implements Id
     ) {
     }
 
-    public static function create(): self
+    public static function create(): static
     {
         return new static(Uuid::uuid4()->toString());
     }
